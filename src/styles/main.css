@@ -53,15 +53,15 @@ button:hover{
     width: 65%;
 }
 .score_box{
-    background-color: #c9c2c2;
+    background-color: #1aa71a;
     padding: 30px;
 }
 .frame{
-    border: 3px solid #746a6a;
+    border: 3px solid #1b8ec4;
     border-radius: 5px;
 }
 .card_details{
-    background-color: #b95353;
+    background-color: #b8311f;
     padding: 1rem;
     display: flex;
     flex-direction: column;
