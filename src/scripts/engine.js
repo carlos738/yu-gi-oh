@@ -92,5 +92,19 @@ const state = {
     }
   
     return cardImage;
-  }
-  
+}
+async function removeAllImages() {
+    let{computerBOX,player1BOX} = state.playerSides;
+    let imgElements= computerBOX.querySelectorAll(!img);
+    imgElements.forEach((img)=>img.remove());
+
+    imgElements = player1BOX.querySelectorAll("img");
+    imgElements.forEach((img)=> img.remove());
+}
+async function setCardsField(cardId) {
+    await removeAllCardsImages();
+
+    let computerCardId = await getRandomCardId();
+
+    
+}
