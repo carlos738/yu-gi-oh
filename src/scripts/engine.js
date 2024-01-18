@@ -106,5 +106,12 @@ async function setCardsField(cardId) {
 
     let computerCardId = await getRandomCardId();
 
-    
+    await showHiddenCardFieldsImages(true);
+    await hiddenCardDetails();
+    await drawCardsINfield(cardId,computerCardId);
+
+    let duelResults = await checkDuelResults(cardId,computerCardId);
+
+    await updateScore();
+    await drawButton(duelResults);
 }
