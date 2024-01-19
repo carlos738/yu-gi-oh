@@ -115,3 +115,35 @@ async function setCardsField(cardId) {
     await updateScore();
     await drawButton(duelResults);
 }
+async function drawCardsINfield(cardId,computerCardId) {
+  state.fieldCards.player.src = cardData[cardId].img;
+  state.fieldCards.computer.src= cardData[computerCardId].img;
+}
+async function showHiddenCardFieldsImages(value) {
+  if (value === true) {
+    state.fieldCards.player.style.display="block";
+    state.fieldCards.computer.style.display="block";
+  }
+  if (value === false) {
+    state.fieldCards.player.style="none";
+    state.fieldCards.computer.style.display="none";
+  }
+  
+}
+async function hiddenCardDetails() {
+  state.cardSprites.avatar.src="";
+  state.cardSprites.avatar.name.innerText="";
+  state.cardSprites.avatar.type.innerText="";
+}
+async function updateScore() {
+  state.score.scoreBox.innerHTML = `WIN : ${state.score.playerScore} | LOSE : ${state.score.computerScore}`;
+}
+async function drawButton(text) {
+  state.actions.button.innerText = text.toUpperCase();
+  state.actions.button.style.display ="block";
+}
+async function checkDuelResults(playerCardId,computerCardId) {
+  let duelResults ="Draw";
+  let playerCard = cardData[playerCardId];
+  
+}
